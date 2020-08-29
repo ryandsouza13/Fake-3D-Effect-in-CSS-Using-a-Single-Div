@@ -1,0 +1,38 @@
+body{
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #990000;
+}
+
+.circle{
+ height: 400px;
+ width: 400px;
+ background: linear-gradient(#f00202 0%, #bd0404 10%, #7d0404 50%, #4a0202 100%);
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+}
+
+.innerCircle{
+ height: 360px;
+ width: 360px;
+ background: linear-gradient(#f06060 0%, #a30505 60%, #4d0202 100%);
+ border-radius: 50%;
+ filter: blur(18px);
+}
+
+.circle::before{
+ content: "";
+ position: absolute;
+ height: 60px;
+ width: 100%;
+ background-color: rgba(0,0,0,.6);
+ bottom: -40px;
+ border-radius: 50%;
+ z-index: -1;
+ filter: blur(10px);
+}
